@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Techs from './pages/Techs';
+import TechDetails from './pages/TechDetails';
+
 
 const Stack = createStackNavigator();
 
@@ -15,6 +17,14 @@ export default function Routes() {
           component={Techs}
           options={{
             title: 'Techs',
+            headerTitleAlign: 'center',
+          }}
+        />
+        <Stack.Screen
+          name="TechDetails"
+          component={TechDetails}
+          options={{
+            title: 'Tech Details',
             headerTitleAlign: 'center',
           }}
         />
